@@ -16,12 +16,11 @@ function running_operations(first_value , second_value, selection_value){
 });
   drop_down.click()
   selecting_option.click()
-  browser.driver.sleep(1000);
   go_button = element(by.id('gobutton'));
   go_button.click();
   return_result = element(by.xpath('//div/form/h2'));
   var EC = protractor.ExpectedConditions;
-  browser.wait(EC.visibilityOf(return_result, 5000));
+  browser.wait(EC.visibilityOf(return_result, 10000));
   return_result.getText().then(function(text)
   {
       console.log(text);
