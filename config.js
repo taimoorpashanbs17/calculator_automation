@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['spec_with_verify.js'],
+  specs: ['basic_operations_testing.js'],
   capabilities: {
     browserName: 'chrome', 
     chromeOptions: {
