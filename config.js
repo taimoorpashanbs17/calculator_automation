@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['basic_operations_testing.js'],
+  specs: ['ui_presence.js'],
   capabilities: {
     browserName: 'chrome', 
     chromeOptions: {

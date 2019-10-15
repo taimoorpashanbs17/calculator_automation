@@ -14,7 +14,7 @@ function running_operations(first_value , second_value, selection_value){
   drop_down = element(by.model('operator'));
   var selecting_option = element(by.xpath('//div/form/select/option['+selection_value+']')).getText();
 
-
+  
   drop_down.click()
   selecting_option.click()
   go_button = element(by.id('gobutton'));
