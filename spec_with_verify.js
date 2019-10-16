@@ -1,12 +1,12 @@
-// function return_expression(first_value, second_value, value){
-//     if (value == '+'){
-//         result = first_value+second_value; 
-//     } 
-//     else if (value == '-'){
-//         result = first_value+second_value;
-//     }
-//     return result;
-// }
+function return_expression(first_value, second_value, value){
+    if (value == '+'){
+        result = first_value+second_value; 
+    } 
+    else if (value == '-'){
+        result = first_value+second_value;
+    }
+    return result;
+}
 
 var url = 'http://juliemr.github.io/protractor-demo/';
 
@@ -22,11 +22,10 @@ function running_operations(first_value , second_value, selection_value){
     go_button = element(by.id('gobutton'));
     go_button.click();
     return_result = element(by.xpath('//div/form/h2'));
-    var exact_time = new Date().toLocaleTimeString();
+
     var EC = protractor.ExpectedConditions;
     browser.wait(EC.visibilityOf(return_result, 5000));
-    var exact_time = new Date().toLocaleTimeString();
-    getting_time = element(by.xpath('//div/table/tbody/tr/td[1]'));
+
 
   }
 

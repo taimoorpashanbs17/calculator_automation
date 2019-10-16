@@ -62,12 +62,10 @@ it('Default Value should be "0"', function() {
             browser.get(url);
             default_value = (element(by.tagName('h2')));
             default_value_text = default_value.getText();
-            default_value_text.then(function(expression)
-            {
-                console.log(expression+' Text is Displaying');
-        });
-            expect(Number(default_value_text)).toBe(0);
-              if (expect(default_value_text).toBe(0)){
+            var new_numb = parseInt(default_value_text)
+            var num = isNaN(parseInt(new_numb)) ? 0 : parseInt(new_numb)
+            expect(num).toBe(parseInt(0));
+              if (expect(num).toBe(0)){
                     console.log('Default Value is 0')
               }
               else{
