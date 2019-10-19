@@ -20,35 +20,47 @@ function running_operations(first_value , second_value, selection_value){
   go_button.click();
   return_result = element(by.xpath('//div/form/h2'));
   browser.wait(EC.visibilityOf(return_result, 10000));
-  var return_result_text = return_result.getText();
-//   var method = eval(first_value +selecting_option+ second_value);
 
-    return_result_text.then(function(expression)
-{
-  console.log(expression);
+var return_result_text = return_result.getText(),
+selecting_option_value = selecting_option.getText();
 
+protractor.promise.all([return_result_text,selecting_option_value]).then(function (values) {
+  if (values[0]==NaN){
+    var num = isNaN(parseInt(new_numb)) ? 0 : parseInt(new_numb)
+    var getting_result = Number(eval(first_value+values[1]+second_value));
+            expect(num).toBe(parseInt(getting_result));
+  }
+  else{
+    var getting_result = Number(eval(first_value+values[1]+second_value));
+    expect(parseInt(values[0])).toEqual(getting_result); }
 });
-    selecting_option_value.getText().then(function(expression)
-{
-    console.log(expression);
-
-});
-
-var getting_value = first_value+selecting_option_value.getText()+second_value;
-console.log("Getting Value is "+getting_value);
-  expect(return_result_text).toEqual(getting_value);
 }
 
 describe('Protractor Demo App', function() {
     
-    it('Modulo between Numbers', function() {
+    it('Addition Of Results', function() {
         browser.get(url);
+      running_operations('3','5','1')
+    });
+
+    it('Modulo between Numbers', function() {
+      browser.get(url);
       running_operations('4','2','3')
     });
 
-//   it('Adding New Value in Input Field', function() {
-//     browser.get(url);
-//     running_operations('3','5','1')
-//   });
+    it('Divsion Between Two Values', function() {
+      browser.get(url);
+      running_operations('16','4','2')
+    });
+
+    it('Multiplication Between Two Values', function() {
+      browser.get(url);
+      running_operations('9','5','4')
+    });
+  
+      it('Subtraction Between Two Values', function() {
+      browser.get(url);
+      running_operations('9','5','5')
+    });
 
 });
