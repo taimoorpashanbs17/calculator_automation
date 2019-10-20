@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['returning_results.js'],
+  specs: ['getting_history.js'],
   capabilities: {
     browserName: 'chrome', 
     chromeOptions: {
