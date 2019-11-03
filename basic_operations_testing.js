@@ -60,9 +60,3 @@ it('Divsion Between Two Values', function() {
   });
 
 
-  //In Order to Print any Element Variable
-//   selecting_option.then(function(expression)
-// {
-//   console.log(expression);
-
-// });

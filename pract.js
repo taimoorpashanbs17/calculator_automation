@@ -33,3 +33,9 @@ console.log(newPage);
 
 
 
+  //In Order to Print any Element Variable
+//   selecting_option.then(function(expression)
+// {
+//   console.log(expression);
+
+// });
