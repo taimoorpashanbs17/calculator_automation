@@ -1,5 +1,3 @@
-process.env.CHROME_BIN = process.env.CHROME_BIN || require('puppeteer').executablePath();
-
 exports.config = {
     capabilities: {
         'directConnect': true,
