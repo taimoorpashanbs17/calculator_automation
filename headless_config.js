@@ -1,5 +1,4 @@
 exports.config = {
-    // seleniumAddress: 'http://127.0.0.1:4445/wd/hub/',
     capabilities: {
         'directConnect': true,
         'browserName': 'chrome',
