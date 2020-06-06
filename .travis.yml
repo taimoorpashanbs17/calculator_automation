@@ -15,3 +15,10 @@ before_script:
 
 script:
   - protractor headless_config.js
+
+notifications:  
+  email:  
+    recipients:  
+    - taimoor_pasha2009@outlook.com  
+    on_success: always  
+    on_failure: always
