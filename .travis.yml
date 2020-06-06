@@ -9,8 +9,8 @@ install:
   - npm install -g protractor
 
 before_script:
-  - webdriver-manager update --versions.chrome 83
-  - webdriver-manager start &
+  - webdriver-manager update --versions.chrome=73.0.3683.86
+  - webdriver-manager start --versions.chrome=73.0.3683.86 &
   - sleep 3
 
 script:
